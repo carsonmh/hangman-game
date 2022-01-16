@@ -62,11 +62,9 @@ def get_word():
         w = random.choice(words).rstrip()
         return w
 
-word = get_word() # [1] (word variable)
+word = get_word()
 
 def get_spaced_word(word, lg=None):
-#[1]
-# lines 74-80(next 6 lines)
     if lg is None:
         lg = []
     w = ''
@@ -117,8 +115,6 @@ def end(win=True):
         screen.blit(wordfont, (300, 400))
     pygame.display.flip()
 
-#[1]
-# lines 124-129(next 5 lines)
     while again:
         for e in pygame.event.get():
             if e.type == pygame.QUIT:
@@ -169,17 +165,3 @@ while True:
                     if get_spaced_word(word, lg).count('_') == 0:
                         end(win=True)
     update()
-
-#BIBLIOGRAPHY
-
-#
-#     [1]https://github.com/techwithtim/Hangman/blob/master/hangman.py
-# Title: Hangman.py Techwithtim Author: Tim
-# Date retrieved: April 11, 2020 Date Posted: Not found
-#
-#
-#     [2]https://www.pinclipart.com/maxpin/ihwbTmm/
-# Title: Pin Clip art Author: Not found
-# Date retrieved: April 13, 2020 Date posted: not found
-# (I used the stick figure in order to make the hangman face)
-#
